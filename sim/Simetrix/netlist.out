@@ -1,0 +1,190 @@
+*************************************************************************************************
+***                                                                                           ***
+*** Elements Version 9.20g (x64) - 18/02/2026 14:59                                           ***
+*** Platform: Windows 10                                                                      ***
+*** Architecture: x64                                                                         ***
+*** Serial Number:                                                                            ***
+*** User:                                                                                     ***
+***                                                                                           ***
+*** TITLE:   ** Unknown                                                                      ***
+*** NETLIST: C:\Users\nicol\Documents\Projects\lab-bench-power-supply\sim\Simetrix\netlist.net***
+***                                                                                           ***
+*************************************************************************************************
+
+********************************************************************************
+***                                                                          ***
+***                                Input Deck                                ***
+***                                                                          ***
+********************************************************************************
+
+.options bjtPSpiceSubNode=1
+.options allowdivzero=1
+.options initCondMode=2
+.options icres=0.002
+.options inhibitAttoISource=1
+q1  0 1 2 3 TIP32C
+R1 1 0 1000
+R2 2 0 1000
+R3 3 0 1000
+R4 4 0 1000
+.OP
+.model TIP32C pnp ( IS=3.58E-13 VAF=100.0 BF=240 IKF=0.2889 NE=1.6245
++    ISE=2.032E-11 IKR=0.1 ISC=1.50E-08 NC=1.9 NR=1 BR=10 RC=0.05 CJC=3.00E-10
++    FC=0.5 MJC=0.45 VJC=0.75 CJE=3.15E-10 MJE=0.51 VJE=0.6 TF=2.30E-08
++    ITF=25 VTF=10 XTF=0.5 RE=0.12 TR=2.00E-07)
+* From Motorola DL111 Rev 5. FT from NS Discretes 1978
+
+********************************************************************************
+***                                                                          ***
+*** Starting DC Operating point analysis analysis at 14:59                   ***
+***                                                                          ***
+*** Analysis card: .OP                                                       ***
+***                                                                          ***
+********************************************************************************
+********************************************************************************
+***                                                                          ***
+***                            Simulation Options                            ***
+***                                                                          ***
+********************************************************************************
+RELTOL                    0.001
+ABSTOL                    1e-12
+VNTOL                     1e-06
+POINTTOL                  0.001
+TEMPERATURE               27C
+GMIN                      1e-12
+Matrix Solver             UF KLU Version 1.1
+
+
+
+********************************************************************************
+***                                                                          ***
+***                             Device parameters                            ***
+***                                                                          ***
+********************************************************************************
+Model parameters for devices of type BJT
+========================================
+Model:       TIP32C       
+
+bf           240          
+br           10           
+cjc          300p         
+cje          315p         
+fc           500m         
+ikf          288.9m       
+ikr          100m         
+is           358f         
+isc          15n          
+ise          20.32p       
+itf          25           
+mjc          450m         
+mje          510m         
+nc           1.9          
+ne           1.6245       
+nr           1            
+rc           50m          
+re           120m         
+tf           23n          
+tr           200n         
+vaf          100          
+vjc          750m         
+vje          600m         
+vtf          10           
+xtf          500m         
+
+
+********************************************************************************
+***                                                                          ***
+***                        DC OPERATING POINT RESULTS                        ***
+***                                                                          ***
+***                           Analysis card: ".OP"                           ***
+***                                                                          ***
+********************************************************************************
+
+NODE VOLTAGES AND BRANCH CURRENTS
+=================================
+
+1                             -7.049732E-24
+2                             11.182117E-27
+3                             0            
+4                             0            
+q1#CW                         351.92751E-30
+q1#EP                         11.183459E-27
+
+DEVICE OPERATING POINT VALUES
+=============================
+
+Operating point for devices of type Resistor
+============================================
+Instance:    R1           R2           R3           R4           
+Using model: $Resistor    $Resistor    $Resistor    $Resistor    
+
+in           2.154721E-30 -3.41432E-33 0            0            
+ip           -2.15472E-30 3.414321E-33 0            0            
+pwr          4.642823E-57 11.65758E-63 0            0            
+rr           1k           1k           1k           1k           
+
+
+Operating point for devices of type BJT
+=======================================
+Instance:    q1           
+Using model: TIP32C       
+
+BetaAc       30.6844313m  
+BetaDc       -945.208187m 
+Cjc          300.000003p  
+Cje          315.0000003p 
+Cjs          0            
+Cxjc         0            
+Gm           -305.239651n 
+IB           -224.475E-42 
+IC           212.1757E-42 
+IE           12.2994E-42  
+IS           0            
+Power        1.582702E-63 
+Rbase        0            
+Ro           3.2759551Meg 
+Rpi          2.067470419G 
+Vbe          -7.06091E-24 
+Vcb          7.049732E-24 
+Vce          -11.1821E-27 
+
+
+Analysis statistics
+===================
+
+Nominal temperature = 27
+Operating temperature = 27
+Total iterations = 10
+Transient iterations = 0
+Transient timepoints = 0
+Accepted timepoints = 0
+Total analysis time = 0.031
+Transient time = 0
+Matrix reordering time = 0
+L-U decomposition time = 0
+Matrix solve time = 0
+Load time = 0
+Transient L-U decomp time = 0
+Transient solve time = 0
+Circuit build time = 0.016
+Simulator initialise time = 0
+Data write time = 0
+Convergence test time = 0
+LTE time = 0
+JI2 Iterations = 10
+Diag. GMIN stepping iterations = 0
+Junc. GMIN stepping iterations = 0
+Source stepping iterations = 0
+PTA iterations = 0
+Number of matrix fill ins = 0
+Number of initial matrix elements = 14
+Circuit equations = 7
+State vector size = 34
+Number of write buffer faults = 0
+
+Run statistics
+==============
+
+Netlist read in time = 0.015
+Total run time = 0.078 seconds
+Analysis concluded 18/02/2026 14:59

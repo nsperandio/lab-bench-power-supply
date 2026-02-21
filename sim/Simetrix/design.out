@@ -1,0 +1,256 @@
+***************************************************************************************************************
+***                                                                                                         ***
+*** Elements Version 9.20g (x64) - 21/02/2026 01:00                                                         ***
+*** Platform: Windows 10                                                                                    ***
+*** Architecture: x64                                                                                       ***
+*** Serial Number:                                                                                          ***
+*** User:                                                                                                   ***
+***                                                                                                         ***
+*** TITLE:   * C:\Users\nicol\Documents\Projects\lab-bench-power-supply\sim\Simetrix\linear_regulator.wxsch***
+*** NETLIST: C:\Users\nicol\Documents\Projects\lab-bench-power-supply\sim\Simetrix\design.net               ***
+***                                                                                                         ***
+***************************************************************************************************************
+
+********************************************************************************
+***                                                                          ***
+***                                Input Deck                                ***
+***                                                                          ***
+********************************************************************************
+
+.options bjtPSpiceSubNode=1
+.options allowdivzero=1
+.options initCondMode=2
+.options icres=0.002
+.options inhibitAttoISource=1
+#SIMETRIX
+R19 Vsen 0 10
+X2 Vref X2_inn VDD 0 C1_P PARAM_OPAMP params: A0=100k
++ CMRR=100k
++ GBW=1e6
++ IB=100n
++ IBOS=1n
++ IQ=0.001
++ PSRR=100k
++ RIN=1meg
++ ROUT=100
++ SR_NEG=1e6
++ SR_POS=1e6
++ VDIFF_NEG=0
++ VDIFF_POS=0
++ VOFF_TOL=0
++ VOS=0 
++ GBW2=5 pinnames: inp inn vsp vsn out
+V5 Iref 0 1.2
+V3 Vref 0 6
+V11 Vin 0 12
+R26 R26_P Q12_C 22k
+V1 VDD 0 24
+Q2 Q12_C R14_P Q2_E Q2N2222
+R3 X2_inn Vsen 10k
+Q14 VG_MIRR VG_MIRR R23_N Q2N2904
+R13 Q2_E 0 1k
+R24 Vin R24_N 10
+Q13 Q13_C VG_MIRR R20_N Q2N2904
+R23 Vin R23_N 10
+Q12 Q12_C VG_MIRR R24_N Q2N2904
+R22 Q13_C 0 470
+Q10 Q11_B R26_P 0 Q2N2222
+R20 Vin R20_N 10
+R2 R2_P X2_inn 1K
+R14 R14_P C1_P 22k
+Q11 D9_P Q11_B Vin TIP42C
+X$H3 Isen 0 D9_P Vsen H3$TP_CCVS params: gain=1 pinnames: P N CP CN
+.subckt H3$TP_CCVS 1 2 3 4
+H1 1 2 V1 {gain} 
+V1 3 4
+.ends
+I4 Vin Q11_B 80m
+I3 VG_MIRR 0 10m
+D9 D9_P Vin IDEAL
+C5 Vsen 0 10p   
+C1 C1_P R2_P 100n   
+.tran 100m
+*.ac dec 500 1 1000000
+.subckt PARAM_OPAMP VINP VINN VCC VEE VOUT params:
++ VOS=0 IB=100n IBOS=1n A0=100k GBW=1e6 SR_POS=1e6 SR_NEG=1e6
++ CMRR=100k PSRR=100k RIN=1meg
++ ROUT=100 IQ=0.001 VDIFF_POS=2 VDIFF_NEG=2 VOFF_TOL=0 GBW2=5 
+*#LABELS ,Offset Voltage,Bias Current,Offset Current,Open-loop Gain,Gain-bandwidth,Pos. Slew Rate,Neg. Slew Rate,CMRR,PSRR,Input Resistance,Output Res.,Quiescent Curr.,Headroom Pos.,Headroom Neg.,Offset V. (Statistical)::-0.1|0.1|10u,2nd-order roll off as a ratio to GBW::0
+.PARAM voffStat = {VOFF_TOL*(GAUSS(1)-1)}
+B1ARB1 G4_N G3_P I=ilim*tanh((V(VINN,VINP)-VOS-voffStat)*Gin/ilim) 
+V1ARB2 G3_P G4_N 0
+** Soft limit using LNCOSH
+.PARAM sharp=10
+** The first term ensures that there is always at least a tiny amount 
+** of gain. No gain at all often leads to problems
+** Modified 29.4.03 - correct error with vee and vcc ref.
+B1ARB2 C1_P G4_N V=-R*I(V1ARB2)/A0*1e-5 +  ((lncosh(sharp*((-R*I(V1ARB2))-(V(VEE,G4_N)+VDIFF_NEG)))+sharp*(V(VEE,G4_N)+VDIFF_NEG) - (lncosh(sharp*((-R*I(V1ARB2))-(V(VCC,G4_N)-VDIFF_POS)))-sharp*(V(VCC,G4_N)-VDIFF_POS)))/sharp/2)
+**B1ARB2 C1_P G4_N V=-R*I(V1ARB2)/A0*1e-5 +  ((lncosh(sharp*((-R*I(V1ARB2))-(V(VEE)+VDIFF_NEG)))+sharp*(V(VEE)+VDIFF_NEG) - (lncosh(sharp*((-R*I(V1ARB2))-(V(VCC)-VDIFF_POS)))-sharp*(V(VCC)-VDIFF_POS)))/sharp/2)
+**B1ARB2 C1_P G4_N V=Limit(-R*I(V1ARB2),V(VEE)+VDIFF_NEG, V(VCC)-VDIFF_POS) 
+**.ends
+V2 V2_P V2_N {Vbias}
+V3 V2_N V3_N {Vbias}
+** 29.04.03 Split offset and bias into separate generators
+I2 VINP G4_N {IB}
+IBOS2 VINP G4_N {IBOS/2}
+I1 VINN G4_N {IB}
+IBOS1 VINN G4_N {-IBOS/2}
+C2 V2_N G4_N {if(gbw2>0, 1/2/PI/RO/GBW2/gbw, 0)}
+C1 C1_P G3_P {C}
+E2 G4_N VEE VCC VEE 500m
+G4 G3_P G4_N VCC G4_N {gin*psgain}
+G2 G3_P G4_N VEE G4_N {gin*psgain}
+G3 G3_P G4_N VINN G4_N {gin*cmgain/2}
+G1 G3_P G4_N VINP G4_N {gin*cmgain/2}
+Q2 VEE V3_N VOUT VCC P1
+Q1 VCC V2_P VOUT VEE N1
+R3 V2_N C1_P {RO}
+** 19.8.04 - somehow got left off
+RIN VINP VINN {RIN}
+.PARAM ILIM = {sqrt(SR_POS)*1e-8}
+.PARAM C = {1e-8/sqrt(SR_POS)}
+.PARAM Gin = {2*PI*GBW*C}
+.PARAM R = {A0/Gin}
+.PARAM IS=1e-15
+.PARAM BETA=100
+** Version 8.1 - fix for Iq/ROUT dependence
+** Use NF parameter to get lower emitter resistance.
+** To retain behaviour for cases where Iq and Rout
+** are compatible, we keep NF at 1.0 wherever possible.
+** Reduce in decade steps for Iq*Rout too small.
+.PARAM Vt0={BOLTZ*300.15/ECHARGE}
+.param NFMAX= {(BETA+1)*ROUT*IQ*2/Vt0/BETA}
+.PARAM NF = {IF(NFMAX<1.0, 10^(floor(log10(NFMAX))), 1.0)}
+.model N1 npn IS={IS} bf={BETA} NF={NF} T_ABS={IF(NFMAX>=1.0,TEMP,27)}
+.model P1 pnp IS={IS} bf={BETA} NF={NF} T_ABS={IF(NFMAX>=1.0,TEMP,27)}
+.PARAM Vt={Vt0*NF}
+.PARAM cmgain={1.0/CMRR}
+.PARAM psgain={1.0/PSRR}
+.PARAM VBIAS = {LN(IQ/IS+1)*Vt}
+.PARAM RO={(BETA+1)*ROUT-VT/IQ/2*BETA}
+.ends
+** Peak- peak voltage source
+.model IDEAL D (IS=1p)
+.model Q2N2222 npn ( IS=2.48E-13 VAF=73.9 BF=400 IKF=0.1962 NE=1.2069
++    ISE=3.696E-14 IKR=0.02 ISC=5.00E-09 NC=2 NR=1 BR=5 RC=0.3 CJC=7.00E-12
++    FC=0.5 MJC=0.5 VJC=0.5 CJE=1.80E-11 MJE=0.5 VJE=1 TF=4.00E-10
++    ITF=2 VTF=10 XTF=10 RE=0.4 TR=4.00E-08)
+* 2N2222 with less gain
+.model Q2N2904 pnp ( IS=3.58E-14 VAF=26.4 BF=120 IKF=0.3416 NE=1.2861
++    ISE=9.574E-14 IKR=0.03 ISC=2.00E-12 NC=1.2 NR=1 BR=5 RC=0.4 CJC=1.80E-11
++    FC=0.5 MJC=0.45 VJC=0.8 CJE=2.65E-11 MJE=0.33 VJE=0.75 TF=4.10E-10
++    ITF=0.54 VTF=3 XTF=20 RE=1.4 TR=8.00E-08)
+*From Philips small-signal transistors sc04 1991.
+* FT vs Ic estimated (ITF,XTF,XTF) no data available
+.model TIP42C pnp ( IS=7.42E-14 VAF=100.0 BF=150 IKF=0.8884 NE=2.8884
++    ISE=1.302E-08 IKR=0.1 ISC=1.00E-09 NC=2 NR=1 BR=10 RC=0.02 CJC=1.10E-10
++    FC=0.5 MJC=0.25 VJC=0.8 CJE=9.00E-11 MJE=0.33 VJE=0.2 TF=3.20E-08
++    ITF=50 VTF=5 XTF=10 RE=0.08 TR=1.30E-07)
+* Motorola, capacitance estimated
+
+********************************************************************************
+***                                                                          ***
+*** Starting Transient analysis at 01:00                                     ***
+***                                                                          ***
+*** Analysis card: .tran 100m                                                ***
+***                                                                          ***
+********************************************************************************
+********************************************************************************
+***                                                                          ***
+***                            Simulation Options                            ***
+***                                                                          ***
+********************************************************************************
+RELTOL                    0.001
+ABSTOL                    1e-12
+VNTOL                     1e-06
+POINTTOL                  0.001
+TEMPERATURE               27C
+GMIN                      1e-12
+Matrix Solver             UF KLU Version 1.1
+
+
+
+********************************************************************************
+***                                                                          ***
+***                             Device parameters                            ***
+***                                                                          ***
+********************************************************************************
+Model parameters for devices of type Diode
+==========================================
+Model:       IDEAL        
+
+is           1p           
+
+
+Model parameters for devices of type BJT
+========================================
+Model:       Q2N2222      Q2N2904      TIP42C       X2.N1        X2.P1        
+
+bf           400          120          150          100          100          
+br           5            5            10           1            1            
+cjc          7p           18p          110p         0            0            
+cje          18p          26.5p        90p          0            0            
+fc           500m         500m         500m         500m         500m         
+ikf          196.2m       341.6m       888.4m       0            0            
+ikr          20m          30m          100m         0            0            
+is           248f         35.8f        74.2f        1f           1f           
+isc          5n           2p           1n           0            0            
+ise          36.96f       95.74f       13.02n       0            0            
+itf          2            540m         50           0            0            
+mjc          500m         450m         250m         330m         330m         
+mje          500m         330m         330m         330m         330m         
+nc           2            1.2          2            2            2            
+ne           1.2069       1.2861       2.8884       1.5          1.5          
+nf           1            1            1            1            1            
+nr           1            1            1            1            1            
+rc           300m         400m         20m          0            0            
+re           400m         1.4          80m          0            0            
+t_abs        0            0            0            27           27           
+tf           400p         410p         32n          0            0            
+tr           40n          80n          130n         0            0            
+vaf          73.9         26.4         100          0            0            
+vjc          500m         800m         800m         750m         750m         
+vje          1            750m         200m         750m         750m         
+vtf          10           3            5            0            0            
+xtf          10           20           10           0            0            
+
+
+Analysis statistics
+===================
+
+Nominal temperature = 27
+Operating temperature = 27
+Total iterations = 140
+Transient iterations = 114
+Transient timepoints = 58
+Accepted timepoints = 58
+Total analysis time = 0.046
+Transient time = 0
+Matrix reordering time = 0
+L-U decomposition time = 0
+Matrix solve time = 0
+Load time = 0
+Transient L-U decomp time = 0
+Transient solve time = 0
+Circuit build time = 0.032
+Simulator initialise time = 0
+Data write time = 0
+Convergence test time = 0
+LTE time = 0
+JI2 Iterations = 26
+Diag. GMIN stepping iterations = 0
+Junc. GMIN stepping iterations = 0
+Source stepping iterations = 0
+PTA iterations = 0
+Number of matrix fill ins = -11
+Number of initial matrix elements = 169
+Circuit equations = 50
+State vector size = 300
+Number of write buffer faults = 0
+
+Run statistics
+==============
+
+Netlist read in time = 0.047
+Total run time = 0.14 seconds
+Analysis concluded 21/02/2026 01:00

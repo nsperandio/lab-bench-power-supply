@@ -1,0 +1,51 @@
+* C:\Users\nicol\Documents\Projects\lab-bench-power-supply\sim\Simetrix\linear_regulator.wxsch
+*#SIMETRIX
+R19 Vsen 0 10
+X2 Vref X2_inn VDD 0 C1_P PARAM_OPAMP params: A0=100k
++ CMRR=100k
++ GBW=1e6
++ IB=100n
++ IBOS=1n
++ IQ=0.001
++ PSRR=100k
++ RIN=1meg
++ ROUT=100
++ SR_NEG=1e6
++ SR_POS=1e6
++ VDIFF_NEG=0
++ VDIFF_POS=0
++ VOFF_TOL=0
++ VOS=0 
++ GBW2=5 pinnames: inp inn vsp vsn out
+V5 Iref 0 1.2
+V3 Vref 0 6
+V11 Vin 0 12
+R26 R26_P Q12_C 22k
+V1 VDD 0 24
+Q2 Q12_C R14_P Q2_E Q2N2222
+R3 X2_inn Vsen 10k
+Q14 VG_MIRR VG_MIRR R23_N Q2N2904
+R13 Q2_E 0 1k
+R24 Vin R24_N 10
+Q13 Q13_C VG_MIRR R20_N Q2N2904
+R23 Vin R23_N 10
+Q12 Q12_C VG_MIRR R24_N Q2N2904
+R22 Q13_C 0 470
+Q10 Q11_B R26_P 0 Q2N2222
+R20 Vin R20_N 10
+R2 R2_P X2_inn 1K
+R14 R14_P C1_P 22k
+Q11 D9_P Q11_B Vin TIP42C
+X$H3 Isen 0 D9_P Vsen H3$TP_CCVS params: gain=1 pinnames: P N CP CN
+.subckt H3$TP_CCVS 1 2 3 4
+H1 1 2 V1 {gain} 
+V1 3 4
+.ends
+I4 Vin Q11_B 80m
+I3 VG_MIRR 0 10m
+D9 D9_P Vin IDEAL
+C5 Vsen 0 10p   
+C1 C1_P R2_P 100n   
+.tran 100m
+*.ac dec 500 1 1000000
+
