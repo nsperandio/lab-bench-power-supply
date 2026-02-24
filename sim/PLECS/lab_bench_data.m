@@ -2,7 +2,7 @@
 
 Vin = 35; %[V]
 
-L_buck= 22e-6; %[H]
+L_buck= 47e-6; %[H]
 Co_buck = 10e-6; %355e-9; %[L]
 fsw = 400e3; %[Hz]
 

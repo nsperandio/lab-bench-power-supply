@@ -1,0 +1,28 @@
+$$$ 1 10001 21    simplis  DATA FOR PLOTTING,  Mon Feb 23 19:04:09 2026    
+INPUT FILE: C:/Users/nicol/Documents/Projects/lab-bench-power-supply/sim/Simetrix/SIMPLIS_Data/ota.deck
+Transient Analysis
+10001 DATA PTS                
+21 VARIABLES                                      
+0   TIME
+1   V(10)
+2   V(11)
+3   V(12)
+4   V(13)
+5   V(#Vref)
+6   V(#Vlink)
+7   V(6)
+8   I(R-ADV_DIGITAL_VERSION#P)
+9   I(R11#P)
+10  I(R18#P)
+11  I(R20#P)
+12  I(R21#P)
+13  I(R22#P)
+14  I(C8#P)
+15  I(V1#P)
+16  I(V2#P)
+17  I(V8#P)
+18  I(X$U5#P)
+19  I(X$U5#N)
+20  I(X$U5#CP)
+21  I(X$U5#CN)
+

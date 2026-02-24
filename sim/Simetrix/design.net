@@ -1,7 +1,17 @@
 * C:\Users\nicol\Documents\Projects\lab-bench-power-supply\sim\Simetrix\linear_regulator.wxsch
 *#SIMETRIX
-R19 Vsen 0 10
-X2 Vref X2_inn VDD 0 C1_P PARAM_OPAMP params: A0=100k
+V20 0 VEE 35
+C12 Vout 0 1u   
+V1 VDD 0 35
+C13 R51_N C13_N 100p   
+C14 C14_P I2_N 10n   
+V3 Vref 0 2.5
+C15 R57_P 0 100p   
+C16 Q15_B Q5_B 1u   
+V5 Iref 0 4
+C17 C17_P R47_P 100n   
+V6 Vset 0 100m
+X7 R52_P X7_inn VDD 0 C13_N PARAM_OPAMP params: A0=100k
 + CMRR=100k
 + GBW=1e6
 + IB=100n
@@ -17,35 +27,69 @@ X2 Vref X2_inn VDD 0 C1_P PARAM_OPAMP params: A0=100k
 + VOFF_TOL=0
 + VOS=0 
 + GBW2=5 pinnames: inp inn vsp vsn out
-V5 Iref 0 1.2
-V3 Vref 0 6
-V11 Vin 0 12
-R26 R26_P Q12_C 22k
-V1 VDD 0 24
-Q2 Q12_C R14_P Q2_E Q2N2222
-R3 X2_inn Vsen 10k
-Q14 VG_MIRR VG_MIRR R23_N Q2N2904
-R13 Q2_E 0 1k
-R24 Vin R24_N 10
-Q13 Q13_C VG_MIRR R20_N Q2N2904
-R23 Vin R23_N 10
-Q12 Q12_C VG_MIRR R24_N Q2N2904
-R22 Q13_C 0 470
-Q10 Q11_B R26_P 0 Q2N2222
-R20 Vin R20_N 10
-R2 R2_P X2_inn 1K
-R14 R14_P C1_P 22k
-Q11 D9_P Q11_B Vin TIP42C
-X$H3 Isen 0 D9_P Vsen H3$TP_CCVS params: gain=1 pinnames: P N CP CN
-.subckt H3$TP_CCVS 1 2 3 4
+X8 X8_inp R47_P VDD 0 R46_N PARAM_OPAMP params: A0=1Meg
++ CMRR=100k
++ GBW=1Meg
++ IB=100n
++ IBOS=1n
++ IQ=1m
++ PSRR=100k
++ RIN=1Meg
++ ROUT=100
++ SR_NEG=1Meg
++ SR_POS=1Meg
++ VDIFF_NEG=0
++ VDIFF_POS=0
++ VOFF_TOL=0
++ VOS=0 
++ GBW2=5 pinnames: inp inn vsp vsn out
+X$H4 Iout 0 Q15_C Vout H4$TP_CCVS params: gain=1 pinnames: P N CP CN
+.subckt H4$TP_CCVS 1 2 3 4
 H1 1 2 V1 {gain} 
 V1 3 4
 .ends
-I4 Vin Q11_B 80m
+Q13 Q13_C VG_MIRR R20_N 0 Q2N2904
+Q14 VG_MIRR VG_MIRR R23_N 0 Q2N2904
+Q15 Q15_C Q15_B V17_P 0 TIP42C
+Q16 R16_N R50_P 0 0 Q2N2222
+R50 R50_P C13_N 10k
+R51 X7_inn R51_N 1k
+R52 R52_P Isen 10k
+R53 X7_inn Iref 10k
+R54 0 R57_P 2k
+R55 R47_P Vset 10k
+R56 R57_P C17_P 100
+R36 V17_P Q15_B 100
+R57 R57_P Vsen 10k
+R16 I2_N R16_N 100
+R37 Vout R37_N 10
+R38 Q5_B I2_N 10k
+R39 Vout 0 10
+X$S4 R37_N 0 S4_CP 0 gen_switch : RON=1  ROFF=1Meg VON=3  VOFF=2  pinnames: P N CP CN
+X$V16 S4_CP 0 STEP_SOURCE pinnames: P N params: _V1=0 _V2=5 _FREQ=10k _DELAY=10m _DRATIOx100=50 _T_RISE=50n _T_FALL=50n _DAMP_COEF=0 _PWIDTH=50u _OFF_UNTIL_DELAY=0 _IDLE_IN_POP=1 _USEPHASE=0 _PHASE=10m _SHOWPARAMS=0
+V17 V17_P 0 32
+Q5 Q15_B Q5_B 0 0 BC337
+V18 Vsen Vout AC 100m 0
+I2 V17_P I2_N 1m
+V19 Isen Iout AC 100m 0
 I3 VG_MIRR 0 10m
-D9 D9_P Vin IDEAL
-C5 Vsen 0 10p   
-C1 C1_P R2_P 100n   
+R20 Vin R20_N 10
+R22 Q13_C 0 470
+R23 Vin R23_N 10
+R46 R16_N R46_N 1k
+R47 R47_P C14_P 1k
+R48 R57_P R47_P 5k
+R49 Vref X8_inp 10k
+.KEEP Iout Isen
+.GRAPH "db(:Iout/:Isen)" Curvelabel="Gain CC" nowarn=true yunit="dB" complete=True analysis="ac" ylog=lin xlog=auto  ydelta=20 persistence=-1 colourname=Probe1_bode_color   axistype=grid  axisname=bodemag  order=0    userid=Probe1$GAIN. MeasureSpec="Gain\sCrossover\sFrequency\s(dB\sPlot)|0|0|0|0!Gain\sMargin\s(dB\sPlot)|0|0|0|0"
+.post_process probe_measure Probe1$GAIN. Gain\sCrossover\sFrequency\s(dB\sPlot)|0|0|0|0!Gain\sMargin\s(dB\sPlot)|0|0|0|0
+.GRAPH "ph(-:Iout/:Isen)" Curvelabel="Phase CC" nowarn=true yunit="degrees" complete=True analysis="ac" ylog=lin xlog=auto  ydelta=45 persistence=-1 colourname=Probe1_bode_color     axisname=bodephase  order=1    userid=Probe1$PHASE. MeasureSpec="Phase\sMargin\s(Phase\sPlot)|0|0|0|0"
+.post_process probe_measure Probe1$PHASE. Phase\sMargin\s(Phase\sPlot)|0|0|0|0
+.KEEP Vout Vsen
+.GRAPH "db(:Vout/:Vsen)" Curvelabel="Gain CV" nowarn=true yunit="dB" complete=True analysis="ac" ylog=lin xlog=auto  ydelta=20 persistence=-1 colourname=Probe3_bode_color   axistype=grid  axisname=bodemag  order=0    userid=Probe3$GAIN. MeasureSpec="Gain\sCrossover\sFrequency\s(dB\sPlot)|0|0|0|0!Gain\sMargin\s(dB\sPlot)|0|0|0|0"
+.post_process probe_measure Probe3$GAIN. Gain\sCrossover\sFrequency\s(dB\sPlot)|0|0|0|0!Gain\sMargin\s(dB\sPlot)|0|0|0|0
+.GRAPH "ph(-:Vout/:Vsen)" Curvelabel="Phase CV" nowarn=true yunit="degrees" complete=True analysis="ac" ylog=lin xlog=auto  ydelta=45 persistence=-1 colourname=Probe3_bode_color     axisname=bodephase  order=1    userid=Probe3$PHASE. MeasureSpec="Phase\sMargin\s(Phase\sPlot)|0|0|0|0"
+.post_process probe_measure Probe3$PHASE. Phase\sMargin\s(Phase\sPlot)|0|0|0|0
 .tran 100m
 *.ac dec 500 1 1000000
 

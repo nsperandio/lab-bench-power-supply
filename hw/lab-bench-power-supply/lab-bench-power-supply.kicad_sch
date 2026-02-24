@@ -1148,32 +1148,32 @@
 		)
 	)
 	(junction
-		(at 69.85 92.71)
+		(at 161.29 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0676d320-d3c3-4325-a07d-b650aea0d072")
 	)
 	(junction
-		(at 128.27 85.09)
+		(at 219.71 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5f1d0ae4-5a54-4483-84ae-d0ba53a8f3a8")
 	)
 	(junction
-		(at 113.03 63.5)
+		(at 204.47 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b3230032-355a-4626-8a4e-c1265e4f17f9")
 	)
 	(junction
-		(at 88.9 92.71)
+		(at 180.34 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fb847330-3e71-4258-b836-e305fc63ee5b")
 	)
 	(wire
 		(pts
-			(xy 69.85 105.41) (xy 72.39 105.41)
+			(xy 161.29 105.41) (xy 163.83 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1183,7 +1183,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 92.71) (xy 88.9 97.79)
+			(xy 180.34 92.71) (xy 180.34 97.79)
 		)
 		(stroke
 			(width 0)
@@ -1193,7 +1193,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 69.85) (xy 88.9 68.58)
+			(xy 180.34 69.85) (xy 180.34 68.58)
 		)
 		(stroke
 			(width 0)
@@ -1203,7 +1203,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 95.25) (xy 60.96 92.71)
+			(xy 152.4 95.25) (xy 152.4 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1213,7 +1213,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 92.71) (xy 88.9 92.71)
+			(xy 161.29 92.71) (xy 180.34 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1223,7 +1223,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 102.87) (xy 69.85 105.41)
+			(xy 161.29 102.87) (xy 161.29 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1233,7 +1233,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 71.12) (xy 128.27 85.09)
+			(xy 219.71 71.12) (xy 219.71 85.09)
 		)
 		(stroke
 			(width 0)
@@ -1243,7 +1243,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 63.5) (xy 113.03 64.77)
+			(xy 204.47 63.5) (xy 204.47 64.77)
 		)
 		(stroke
 			(width 0)
@@ -1253,7 +1253,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 63.5) (xy 148.59 63.5)
+			(xy 224.79 63.5) (xy 240.03 63.5)
 		)
 		(stroke
 			(width 0)
@@ -1263,7 +1263,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 83.82) (xy 113.03 85.09)
+			(xy 204.47 83.82) (xy 204.47 85.09)
 		)
 		(stroke
 			(width 0)
@@ -1273,7 +1273,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 72.39) (xy 113.03 73.66)
+			(xy 204.47 72.39) (xy 204.47 73.66)
 		)
 		(stroke
 			(width 0)
@@ -1283,7 +1283,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 90.17) (xy 88.9 92.71)
+			(xy 180.34 90.17) (xy 180.34 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1293,7 +1293,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 63.5) (xy 113.03 63.5)
+			(xy 180.34 63.5) (xy 204.47 63.5)
 		)
 		(stroke
 			(width 0)
@@ -1303,7 +1303,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 63.5) (xy 123.19 63.5)
+			(xy 204.47 63.5) (xy 214.63 63.5)
 		)
 		(stroke
 			(width 0)
@@ -1313,7 +1313,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 97.79) (xy 128.27 106.68)
+			(xy 219.71 97.79) (xy 219.71 106.68)
 		)
 		(stroke
 			(width 0)
@@ -1323,7 +1323,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 92.71) (xy 69.85 92.71)
+			(xy 152.4 92.71) (xy 161.29 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1333,7 +1333,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 92.71) (xy 120.65 92.71)
+			(xy 209.55 92.71) (xy 212.09 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1343,7 +1343,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 85.09) (xy 128.27 85.09)
+			(xy 204.47 85.09) (xy 219.71 85.09)
 		)
 		(stroke
 			(width 0)
@@ -1353,7 +1353,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 77.47) (xy 88.9 80.01)
+			(xy 180.34 77.47) (xy 180.34 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1363,7 +1363,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 102.87) (xy 60.96 105.41)
+			(xy 152.4 102.87) (xy 152.4 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1373,7 +1373,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 68.58) (xy 88.9 68.58)
+			(xy 160.02 68.58) (xy 180.34 68.58)
 		)
 		(stroke
 			(width 0)
@@ -1383,7 +1383,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 92.71) (xy 69.85 95.25)
+			(xy 161.29 92.71) (xy 161.29 95.25)
 		)
 		(stroke
 			(width 0)
@@ -1393,7 +1393,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 105.41) (xy 88.9 107.95)
+			(xy 180.34 105.41) (xy 180.34 107.95)
 		)
 		(stroke
 			(width 0)
@@ -1403,7 +1403,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 92.71) (xy 110.49 92.71)
+			(xy 180.34 92.71) (xy 201.93 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1413,7 +1413,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 105.41) (xy 63.5 105.41)
+			(xy 152.4 105.41) (xy 154.94 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1423,7 +1423,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 85.09) (xy 128.27 87.63)
+			(xy 219.71 85.09) (xy 219.71 87.63)
 		)
 		(stroke
 			(width 0)
@@ -1432,7 +1432,7 @@
 		(uuid "fc6e8a9e-e240-41cc-ac73-93fe027ad4b8")
 	)
 	(label "V*"
-		(at 63.5 105.41 180)
+		(at 154.94 105.41 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1442,7 +1442,7 @@
 		(uuid "0b544239-a977-4afa-abc8-a65056f86134")
 	)
 	(label "I*"
-		(at 72.39 105.41 180)
+		(at 163.83 105.41 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1453,7 +1453,7 @@
 	)
 	(symbol
 		(lib_id "03_GenericPassives:Res_0805")
-		(at 88.9 101.6 0)
+		(at 180.34 101.6 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1462,7 +1462,7 @@
 		(fields_autoplaced yes)
 		(uuid "1e68345e-4c0b-4332-9b93-7c750717dace")
 		(property "Reference" "R4"
-			(at 91.44 100.3299 0)
+			(at 182.88 100.3299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1471,7 +1471,7 @@
 			)
 		)
 		(property "Value" "R"
-			(at 91.44 102.8699 0)
+			(at 182.88 102.8699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1480,7 +1480,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 87.122 101.6 90)
+			(at 178.562 101.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1489,7 +1489,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 88.9 101.6 0)
+			(at 180.34 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1498,7 +1498,7 @@
 			)
 		)
 		(property "Description" "Resistor 0805 Package"
-			(at 88.9 101.6 0)
+			(at 180.34 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1507,7 +1507,7 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 88.9 101.6 0)
+			(at 180.34 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1516,7 +1516,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" ""
-			(at 88.9 101.6 0)
+			(at 180.34 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1525,7 +1525,7 @@
 			)
 		)
 		(property "Supplier Part Number" ""
-			(at 88.9 101.6 0)
+			(at 180.34 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1534,7 +1534,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 88.9 101.6 0)
+			(at 180.34 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1543,7 +1543,7 @@
 			)
 		)
 		(property "Supplier" ""
-			(at 88.9 101.6 0)
+			(at 180.34 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1552,7 +1552,7 @@
 			)
 		)
 		(property "Mount" "SMD"
-			(at 88.9 101.6 0)
+			(at 180.34 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1561,7 +1561,7 @@
 			)
 		)
 		(property "Package" "0805"
-			(at 88.9 101.6 0)
+			(at 180.34 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1586,7 +1586,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 88.9 107.95 0)
+		(at 180.34 107.95 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1595,7 +1595,7 @@
 		(fields_autoplaced yes)
 		(uuid "3c8afa23-d131-47d8-b27c-237c1e838749")
 		(property "Reference" "#PWR02"
-			(at 88.9 114.3 0)
+			(at 180.34 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1604,7 +1604,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 88.9 113.03 0)
+			(at 180.34 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1612,7 +1612,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 88.9 107.95 0)
+			(at 180.34 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1621,7 +1621,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 88.9 107.95 0)
+			(at 180.34 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1630,7 +1630,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 88.9 107.95 0)
+			(at 180.34 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1652,7 +1652,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_BJT:BC856BS")
-		(at 110.49 78.74 0)
+		(at 201.93 78.74 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -1662,7 +1662,7 @@
 		(fields_autoplaced yes)
 		(uuid "51702299-4252-43fe-b95a-e26f4c7107c1")
 		(property "Reference" "Q3"
-			(at 115.57 77.4699 0)
+			(at 207.01 77.4699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1671,7 +1671,7 @@
 			)
 		)
 		(property "Value" "BC856BS"
-			(at 115.57 80.0099 0)
+			(at 207.01 80.0099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1680,7 +1680,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
-			(at 115.57 81.28 0)
+			(at 207.01 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1689,7 +1689,7 @@
 			)
 		)
 		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BC856BS.pdf"
-			(at 110.49 78.74 0)
+			(at 201.93 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1698,7 +1698,7 @@
 			)
 		)
 		(property "Description" "100mA IC, 65V Vce, Dual PNP/PNP Transistors, SOT-363"
-			(at 110.49 78.74 0)
+			(at 201.93 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1735,7 +1735,7 @@
 	)
 	(symbol
 		(lib_id "Device:D")
-		(at 69.85 99.06 90)
+		(at 161.29 99.06 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1744,7 +1744,7 @@
 		(fields_autoplaced yes)
 		(uuid "5754ccab-b6fc-4c27-ab38-62a6095df6ba")
 		(property "Reference" "D2"
-			(at 72.39 97.7899 90)
+			(at 163.83 97.7899 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1753,7 +1753,7 @@
 			)
 		)
 		(property "Value" "D"
-			(at 72.39 100.3299 90)
+			(at 163.83 100.3299 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1762,7 +1762,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 69.85 99.06 0)
+			(at 161.29 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1771,7 +1771,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 69.85 99.06 0)
+			(at 161.29 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1780,7 +1780,7 @@
 			)
 		)
 		(property "Description" "Diode"
-			(at 69.85 99.06 0)
+			(at 161.29 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1789,7 +1789,7 @@
 			)
 		)
 		(property "Sim.Device" "D"
-			(at 69.85 99.06 0)
+			(at 161.29 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1798,7 +1798,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 69.85 99.06 0)
+			(at 161.29 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1823,7 +1823,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 128.27 106.68 0)
+		(at 219.71 106.68 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1832,7 +1832,7 @@
 		(fields_autoplaced yes)
 		(uuid "6f7f8dcd-888c-4eab-a2e8-6bd1f7229212")
 		(property "Reference" "#PWR01"
-			(at 128.27 113.03 0)
+			(at 219.71 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1841,7 +1841,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 128.27 111.76 0)
+			(at 219.71 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1849,7 +1849,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 128.27 106.68 0)
+			(at 219.71 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1858,7 +1858,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 128.27 106.68 0)
+			(at 219.71 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1867,7 +1867,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 128.27 106.68 0)
+			(at 219.71 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1889,7 +1889,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_BJT:TIP42C")
-		(at 128.27 66.04 90)
+		(at 219.71 66.04 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1898,7 +1898,7 @@
 		(fields_autoplaced yes)
 		(uuid "8ba98665-c2a9-431e-89d1-45703f3b1fa9")
 		(property "Reference" "Q1"
-			(at 128.27 57.15 90)
+			(at 219.71 57.15 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1906,7 +1906,7 @@
 			)
 		)
 		(property "Value" "TIP42C"
-			(at 128.27 59.69 90)
+			(at 219.71 59.69 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1914,7 +1914,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
-			(at 130.175 59.69 0)
+			(at 221.615 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1925,7 +1925,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=TIP42.PDF"
-			(at 128.27 66.04 0)
+			(at 219.71 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1935,7 +1935,7 @@
 			)
 		)
 		(property "Description" "-6A Ic, -100V Vce, Power PNP Transistor, TO-220"
-			(at 128.27 66.04 0)
+			(at 219.71 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1944,7 +1944,7 @@
 			)
 		)
 		(property "Sim.Device" "PNP"
-			(at 128.27 66.04 0)
+			(at 219.71 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1953,7 +1953,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=B 2=C 3=E"
-			(at 128.27 66.04 0)
+			(at 219.71 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1981,7 +1981,7 @@
 	)
 	(symbol
 		(lib_id "Device:D")
-		(at 60.96 99.06 90)
+		(at 152.4 99.06 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1990,7 +1990,7 @@
 		(fields_autoplaced yes)
 		(uuid "8c727a4d-b57f-409c-acfe-45791c26dd33")
 		(property "Reference" "D1"
-			(at 63.5 97.7899 90)
+			(at 154.94 97.7899 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1999,7 +1999,7 @@
 			)
 		)
 		(property "Value" "D"
-			(at 63.5 100.3299 90)
+			(at 154.94 100.3299 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2008,7 +2008,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 60.96 99.06 0)
+			(at 152.4 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2017,7 +2017,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 60.96 99.06 0)
+			(at 152.4 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2026,7 +2026,7 @@
 			)
 		)
 		(property "Description" "Diode"
-			(at 60.96 99.06 0)
+			(at 152.4 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2035,7 +2035,7 @@
 			)
 		)
 		(property "Sim.Device" "D"
-			(at 60.96 99.06 0)
+			(at 152.4 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2044,7 +2044,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 60.96 99.06 0)
+			(at 152.4 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2069,7 +2069,7 @@
 	)
 	(symbol
 		(lib_id "03_GenericPassives:Res_0805")
-		(at 88.9 73.66 0)
+		(at 180.34 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2078,7 +2078,7 @@
 		(fields_autoplaced yes)
 		(uuid "98f90a84-41fa-48c1-8943-a89f0cdcd443")
 		(property "Reference" "R3"
-			(at 91.44 72.3899 0)
+			(at 182.88 72.3899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2087,7 +2087,7 @@
 			)
 		)
 		(property "Value" "R"
-			(at 91.44 74.9299 0)
+			(at 182.88 74.9299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2096,7 +2096,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 87.122 73.66 90)
+			(at 178.562 73.66 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2105,7 +2105,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 88.9 73.66 0)
+			(at 180.34 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2114,7 +2114,7 @@
 			)
 		)
 		(property "Description" "Resistor 0805 Package"
-			(at 88.9 73.66 0)
+			(at 180.34 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2123,7 +2123,7 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 88.9 73.66 0)
+			(at 180.34 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2132,7 +2132,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" ""
-			(at 88.9 73.66 0)
+			(at 180.34 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2141,7 +2141,7 @@
 			)
 		)
 		(property "Supplier Part Number" ""
-			(at 88.9 73.66 0)
+			(at 180.34 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2150,7 +2150,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 88.9 73.66 0)
+			(at 180.34 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2159,7 +2159,7 @@
 			)
 		)
 		(property "Supplier" ""
-			(at 88.9 73.66 0)
+			(at 180.34 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2168,7 +2168,7 @@
 			)
 		)
 		(property "Mount" "SMD"
-			(at 88.9 73.66 0)
+			(at 180.34 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2177,7 +2177,7 @@
 			)
 		)
 		(property "Package" "0805"
-			(at 88.9 73.66 0)
+			(at 180.34 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2202,7 +2202,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_BJT:BC856BS")
-		(at 86.36 85.09 0)
+		(at 177.8 85.09 0)
 		(mirror x)
 		(unit 2)
 		(exclude_from_sim no)
@@ -2212,7 +2212,7 @@
 		(fields_autoplaced yes)
 		(uuid "9c300729-6d44-4c36-bd2f-de77d8c880ca")
 		(property "Reference" "Q3"
-			(at 91.44 83.8199 0)
+			(at 182.88 83.8199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2221,7 +2221,7 @@
 			)
 		)
 		(property "Value" "BC856BS"
-			(at 91.44 86.3599 0)
+			(at 182.88 86.3599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2230,7 +2230,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
-			(at 91.44 87.63 0)
+			(at 182.88 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2239,7 +2239,7 @@
 			)
 		)
 		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BC856BS.pdf"
-			(at 86.36 85.09 0)
+			(at 177.8 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2248,7 +2248,7 @@
 			)
 		)
 		(property "Description" "100mA IC, 65V Vce, Dual PNP/PNP Transistors, SOT-363"
-			(at 86.36 85.09 0)
+			(at 177.8 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2257,22 +2257,22 @@
 			)
 		)
 		(pin "3"
-			(uuid "64360d96-4264-4ce4-8b7b-aec6df312d40")
+			(uuid "64360d96-4264-4ce4-8b7b-aec6df312d41")
 		)
 		(pin "2"
-			(uuid "302abba9-2c7e-4f90-a370-87f932e3d83c")
+			(uuid "302abba9-2c7e-4f90-a370-87f932e3d83d")
 		)
 		(pin "5"
-			(uuid "dfb21d9f-0d79-4a98-8dab-466fdd880de1")
+			(uuid "dfb21d9f-0d79-4a98-8dab-466fdd880de2")
 		)
 		(pin "4"
-			(uuid "75edbfd6-479c-449e-84c6-77caeadf4c5a")
+			(uuid "75edbfd6-479c-449e-84c6-77caeadf4c5b")
 		)
 		(pin "6"
-			(uuid "cacff7e5-9b36-4c7c-8abd-f2b107059f91")
+			(uuid "cacff7e5-9b36-4c7c-8abd-f2b107059f92")
 		)
 		(pin "1"
-			(uuid "55025481-09cd-4930-ae8c-17ffa70b944c")
+			(uuid "55025481-09cd-4930-ae8c-17ffa70b944d")
 		)
 		(instances
 			(project ""
@@ -2285,7 +2285,7 @@
 	)
 	(symbol
 		(lib_id "03_GenericPassives:Res_0805")
-		(at 113.03 68.58 0)
+		(at 204.47 68.58 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2294,7 +2294,7 @@
 		(fields_autoplaced yes)
 		(uuid "b0209192-de60-4e42-a662-258e66f8eea8")
 		(property "Reference" "R1"
-			(at 115.57 67.3099 0)
+			(at 207.01 67.3099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2303,7 +2303,7 @@
 			)
 		)
 		(property "Value" "R"
-			(at 115.57 69.8499 0)
+			(at 207.01 69.8499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2312,7 +2312,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 111.252 68.58 90)
+			(at 202.692 68.58 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2321,7 +2321,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 113.03 68.58 0)
+			(at 204.47 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2330,7 +2330,7 @@
 			)
 		)
 		(property "Description" "Resistor 0805 Package"
-			(at 113.03 68.58 0)
+			(at 204.47 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2339,7 +2339,7 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 113.03 68.58 0)
+			(at 204.47 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2348,7 +2348,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" ""
-			(at 113.03 68.58 0)
+			(at 204.47 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2357,7 +2357,7 @@
 			)
 		)
 		(property "Supplier Part Number" ""
-			(at 113.03 68.58 0)
+			(at 204.47 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2366,7 +2366,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 113.03 68.58 0)
+			(at 204.47 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2375,7 +2375,7 @@
 			)
 		)
 		(property "Supplier" ""
-			(at 113.03 68.58 0)
+			(at 204.47 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2384,7 +2384,7 @@
 			)
 		)
 		(property "Mount" "SMD"
-			(at 113.03 68.58 0)
+			(at 204.47 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2393,7 +2393,7 @@
 			)
 		)
 		(property "Package" "0805"
-			(at 113.03 68.58 0)
+			(at 204.47 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2418,7 +2418,7 @@
 	)
 	(symbol
 		(lib_id "Device:Q_NPN")
-		(at 125.73 92.71 0)
+		(at 217.17 92.71 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2427,7 +2427,7 @@
 		(fields_autoplaced yes)
 		(uuid "e84903f5-e634-4c0e-897c-bcdea0ca141a")
 		(property "Reference" "Q2"
-			(at 130.81 91.4399 0)
+			(at 222.25 91.4399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2436,7 +2436,7 @@
 			)
 		)
 		(property "Value" "Q_NPN"
-			(at 130.81 93.9799 0)
+			(at 222.25 93.9799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2445,7 +2445,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 130.81 90.17 0)
+			(at 222.25 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2454,7 +2454,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 125.73 92.71 0)
+			(at 217.17 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2463,7 +2463,7 @@
 			)
 		)
 		(property "Description" "NPN bipolar junction transistor"
-			(at 125.73 92.71 0)
+			(at 217.17 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2491,7 +2491,7 @@
 	)
 	(symbol
 		(lib_id "03_GenericPassives:Res_0805")
-		(at 114.3 92.71 90)
+		(at 205.74 92.71 90)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2500,7 +2500,7 @@
 		(dnp no)
 		(uuid "f832c8ae-744c-4fc6-b640-84d2ece80802")
 		(property "Reference" "R2"
-			(at 114.3 99.06 90)
+			(at 205.74 99.06 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2508,7 +2508,7 @@
 			)
 		)
 		(property "Value" "R"
-			(at 114.3 96.52 90)
+			(at 205.74 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2516,7 +2516,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 114.3 90.932 90)
+			(at 205.74 90.932 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2525,7 +2525,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 114.3 92.71 0)
+			(at 205.74 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2534,7 +2534,7 @@
 			)
 		)
 		(property "Description" "Resistor 0805 Package"
-			(at 114.3 92.71 0)
+			(at 205.74 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2543,7 +2543,7 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 114.3 92.71 0)
+			(at 205.74 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2552,7 +2552,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" ""
-			(at 114.3 92.71 0)
+			(at 205.74 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2561,7 +2561,7 @@
 			)
 		)
 		(property "Supplier Part Number" ""
-			(at 114.3 92.71 0)
+			(at 205.74 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2570,7 +2570,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 114.3 92.71 0)
+			(at 205.74 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2579,7 +2579,7 @@
 			)
 		)
 		(property "Supplier" ""
-			(at 114.3 92.71 0)
+			(at 205.74 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2588,7 +2588,7 @@
 			)
 		)
 		(property "Mount" "SMD"
-			(at 114.3 92.71 0)
+			(at 205.74 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2597,7 +2597,7 @@
 			)
 		)
 		(property "Package" "0805"
-			(at 114.3 92.71 0)
+			(at 205.74 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2616,6 +2616,48 @@
 				(path "/d1168f00-28b7-4489-908e-e6a9a536fe23"
 					(reference "R2")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 77.47 68.58)
+		(size 43.18 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "1ad2fbdd-056b-4c83-a5df-a70a03c68260")
+		(property "Sheetname" "Buck"
+			(at 77.47 67.8684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Buck.kicad_sch"
+			(at 77.47 99.6446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "lab-bench-power-supply"
+				(path "/d1168f00-28b7-4489-908e-e6a9a536fe23"
+					(page "2")
 				)
 			)
 		)

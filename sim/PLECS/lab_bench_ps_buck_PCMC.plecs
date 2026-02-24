@@ -54,8 +54,8 @@ Plecs {
   ScriptsDialogSplitterPos "100"
   Schematic {
     Location      [0, 26; 2048, 1068]
-    ZoomFactor    1.71499
-    SliderPosition [169, 280]
+    ZoomFactor    1.49864
+    SliderPosition [-1, 575]
     ShowBrowser   off
     BrowserWidth  100
     Component {

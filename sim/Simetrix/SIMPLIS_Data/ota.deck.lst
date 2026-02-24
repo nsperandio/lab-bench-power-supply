@@ -1,0 +1,54 @@
+************************************************************************
+              Input file after include files are included
+                and undefined subcircuits and models are
+                    resolved through library search
+************************************************************************
+
+
+****************** MAIN CIRCUIT @ INPUT/INCLUDE FILE *******************
+* C:\Users\nicol\Documents\Projects\lab-bench-power-supply\sim\Simetrix\ota.wxsch
+.node_map Vref 14
+.node_map Vlink 15
+.print  ALL
+.options PSP_NPT=10001 POP_ITRMAX=20 POP_OUTPUT_CYCLES=5 SNAPSHOT_INTVL=0 SNAPSHOT_NPT=11
++ MIN_AVG_TOPOLOGY_DUR=1a AVG_TOPOLOGY_DUR_MEASUREMENT_WINDOW=128
+.tran 1m 0
+C8 13 0 2.4n
+R11 10 0 10k
+R18 15 10 805k
+R20 14 10 730k
+R21 12 0 100Meg
+R22 12 13 8.2k
+X$U5 0 12 11 10 SIMPLIS_VCCS_WITH_LIMITER$1
+V1 14 0 30
+V2 15 0 32
+V8 11 0 800m
+
+********  SUBCIRCUIT SIMPLIS_VCCS_WITH_LIMITER$1 @ input file C:/Users/nicol/Documents/Projects/lab-bench-power-supply/sim/Simetrix/SIMPLIS_Data/ota.deck
+.subckt SIMPLIS_VCCS_WITH_LIMITER$1  201 202 101 102
+.NODE_MAP P 201
+.NODE_MAP N 202
+.NODE_MAP CP 101
+.NODE_MAP CN 102
+X$NON_IDEAL_CLAMPING 201 202 101 102 SIMPLIS_VCCS_WITH_LIMITER_V1$2
+
+********  SUBCIRCUIT SIMPLIS_VCCS_WITH_LIMITER_V1$2 @ input file C:/Users/nicol/Documents/Projects/lab-bench-power-supply/sim/Simetrix/SIMPLIS_Data/ota.deck
+.subckt SIMPLIS_VCCS_WITH_LIMITER_V1$2  201 202 101 102
+.NODE_MAP P 201
+.NODE_MAP N 202
+.NODE_MAP CP 101
+.NODE_MAP CN 102
+.NODE_MAP INTERMEDIATE_P 301
+G_LEFT 202 301 101 102 0.0012
+!R_INTERMEDIATE 301 202 MR_INTERMEDIATEM IC=2
+G_RIGHT 201 202 301 202 1
+
+********  MODEL MR_INTERMEDIATEM @ input file C:/Users/nicol/Documents/Projects/lab-bench-power-supply/sim/Simetrix/SIMPLIS_Data/ota.deck
+.MODEL MR_INTERMEDIATEM IPWLR NSEG=3  X0=-10.1  Y0=-100.01k  X1=-10  Y1=-10  X2=10
++  Y2=10  X3=10.1  Y3=100.01k
+.ends SIMPLIS_VCCS_WITH_LIMITER_V1$2
+.ends SIMPLIS_VCCS_WITH_LIMITER$1
+.end
+********  END OF input file C:/Users/nicol/Documents/Projects/lab-bench-power-supply/sim/Simetrix/SIMPLIS_Data/ota.deck
+
+

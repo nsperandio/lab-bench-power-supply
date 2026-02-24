@@ -1,6 +1,6 @@
 *************************************************************************************************
 ***                                                                                           ***
-*** Elements Version 9.20g (x64) - 18/02/2026 14:59                                           ***
+*** Elements Version 9.20g (x64) - 21/02/2026 15:00                                           ***
 *** Platform: Windows 10                                                                      ***
 *** Architecture: x64                                                                         ***
 *** Serial Number:                                                                            ***
@@ -22,21 +22,21 @@
 .options initCondMode=2
 .options icres=0.002
 .options inhibitAttoISource=1
-q1  0 1 2 3 TIP32C
+q1  0 1 2 3 TIP42C
 R1 1 0 1000
 R2 2 0 1000
 R3 3 0 1000
 R4 4 0 1000
 .OP
-.model TIP32C pnp ( IS=3.58E-13 VAF=100.0 BF=240 IKF=0.2889 NE=1.6245
-+    ISE=2.032E-11 IKR=0.1 ISC=1.50E-08 NC=1.9 NR=1 BR=10 RC=0.05 CJC=3.00E-10
-+    FC=0.5 MJC=0.45 VJC=0.75 CJE=3.15E-10 MJE=0.51 VJE=0.6 TF=2.30E-08
-+    ITF=25 VTF=10 XTF=0.5 RE=0.12 TR=2.00E-07)
-* From Motorola DL111 Rev 5. FT from NS Discretes 1978
+.model TIP42C pnp ( IS=7.42E-14 VAF=100.0 BF=150 IKF=0.8884 NE=2.8884
++    ISE=1.302E-08 IKR=0.1 ISC=1.00E-09 NC=2 NR=1 BR=10 RC=0.02 CJC=1.10E-10
++    FC=0.5 MJC=0.25 VJC=0.8 CJE=9.00E-11 MJE=0.33 VJE=0.2 TF=3.20E-08
++    ITF=50 VTF=5 XTF=10 RE=0.08 TR=1.30E-07)
+* Motorola, capacitance estimated
 
 ********************************************************************************
 ***                                                                          ***
-*** Starting DC Operating point analysis analysis at 14:59                   ***
+*** Starting DC Operating point analysis analysis at 15:00                   ***
 ***                                                                          ***
 *** Analysis card: .OP                                                       ***
 ***                                                                          ***
@@ -63,33 +63,33 @@ Matrix Solver             UF KLU Version 1.1
 ********************************************************************************
 Model parameters for devices of type BJT
 ========================================
-Model:       TIP32C       
+Model:       TIP42C       
 
-bf           240          
+bf           150          
 br           10           
-cjc          300p         
-cje          315p         
+cjc          110p         
+cje          90p          
 fc           500m         
-ikf          288.9m       
+ikf          888.4m       
 ikr          100m         
-is           358f         
-isc          15n          
-ise          20.32p       
-itf          25           
-mjc          450m         
-mje          510m         
-nc           1.9          
-ne           1.6245       
+is           74.2f        
+isc          1n           
+ise          13.02n       
+itf          50           
+mjc          250m         
+mje          330m         
+nc           2            
+ne           2.8884       
 nr           1            
-rc           50m          
-re           120m         
-tf           23n          
-tr           200n         
+rc           20m          
+re           80m          
+tf           32n          
+tr           130n         
 vaf          100          
-vjc          750m         
-vje          600m         
-vtf          10           
-xtf          500m         
+vjc          800m         
+vje          200m         
+vtf          5            
+xtf          10           
 
 
 ********************************************************************************
@@ -103,12 +103,12 @@ xtf          500m
 NODE VOLTAGES AND BRANCH CURRENTS
 =================================
 
-1                             -7.049732E-24
-2                             11.182117E-27
+1                             -982.0891E-24
+2                             1.0548321E-21
 3                             0            
 4                             0            
-q1#CW                         351.92751E-30
-q1#EP                         11.183459E-27
+q1#CW                         -1.45486E-27 
+q1#EP                         1.0549165E-21
 
 DEVICE OPERATING POINT VALUES
 =============================
@@ -118,35 +118,35 @@ Operating point for devices of type Resistor
 Instance:    R1           R2           R3           R4           
 Using model: $Resistor    $Resistor    $Resistor    $Resistor    
 
-in           2.154721E-30 -3.41432E-33 0            0            
-ip           -2.15472E-30 3.414321E-33 0            0            
-pwr          4.642823E-57 11.65758E-63 0            0            
+in           373.8668E-30 -354.891E-30 0            0            
+ip           -373.867E-30 354.8913E-30 0            0            
+pwr          139.7764E-54 125.9479E-54 0            0            
 rr           1k           1k           1k           1k           
 
 
 Operating point for devices of type BJT
 =======================================
 Instance:    q1           
-Using model: TIP32C       
+Using model: TIP42C       
 
-BetaAc       30.6844313m  
-BetaDc       -945.208187m 
-Cjc          300.000003p  
-Cje          315.0000003p 
+BetaAc       22.19856783u 
+BetaDc       7.5164014454 
+Cjc          110.0000005p 
+Cje          90.00000012p 
 Cjs          0            
 Cxjc         0            
-Gm           -305.239651n 
-IB           -224.475E-42 
-IC           212.1757E-42 
-IE           12.2994E-42  
+Gm           -19.3321375n 
+IB           -42.2453E-39 
+IC           -317.533E-39 
+IE           359.7779E-39 
 IS           0            
-Power        1.582702E-63 
+Power        421.0248E-60 
 Rbase        0            
-Ro           3.2759551Meg 
-Rpi          2.067470419G 
-Vbe          -7.06091E-24 
-Vcb          7.049732E-24 
-Vce          -11.1821E-27 
+Ro           51.716988Meg 
+Rpi          5.7377961Meg 
+Vbe          -2.03692E-21 
+Vcb          982.0891E-24 
+Vce          -1.05483E-21 
 
 
 Analysis statistics
@@ -185,6 +185,6 @@ Number of write buffer faults = 0
 Run statistics
 ==============
 
-Netlist read in time = 0.015
-Total run time = 0.078 seconds
-Analysis concluded 18/02/2026 14:59
+Netlist read in time = 0.016
+Total run time = 0.063 seconds
+Analysis concluded 21/02/2026 15:00
